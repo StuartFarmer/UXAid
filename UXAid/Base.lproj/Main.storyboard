@@ -16,11 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6g0-ib-HxB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9Q-lh-NP6">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="X8q-YQ-ghi"/>
-                                    <barButtonItem title="Item" id="YYe-1s-aRG"/>
+                                    <barButtonItem title="Clear" id="YYe-1s-aRG">
+                                        <connections>
+                                            <action selector="clearPressed:" destination="vXZ-lx-hvc" id="zBf-Kg-3Hy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7Bi-Qn-CLF"/>
+                                    <barButtonItem title="Add Image" id="Hfs-gO-n8n"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mn4-YZ-HD4"/>
+                                    <barButtonItem title="View Heat" id="7nM-sd-01X"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="u7R-bK-EZs"/>
                                 </items>
                             </toolbar>
@@ -28,10 +39,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="p9Q-lh-NP6" secondAttribute="trailing" id="8ex-7J-W7J"/>
+                            <constraint firstItem="6g0-ib-HxB" firstAttribute="leading" secondItem="p9Q-lh-NP6" secondAttribute="leading" id="HY3-lh-Fcf"/>
+                            <constraint firstItem="6g0-ib-HxB" firstAttribute="trailing" secondItem="p9Q-lh-NP6" secondAttribute="trailing" id="YWS-pp-cAW"/>
+                            <constraint firstItem="6g0-ib-HxB" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="gz5-gz-ANN"/>
                             <constraint firstItem="p9Q-lh-NP6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="hoK-37-GYB"/>
                             <constraint firstItem="p9Q-lh-NP6" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="iBw-nh-uW9"/>
+                            <constraint firstItem="6g0-ib-HxB" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="yGZ-9q-plz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="toolbar" destination="p9Q-lh-NP6" id="Ce1-wt-SLr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

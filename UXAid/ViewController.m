@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController () {
-    NSMutableArray *points;
+    NSMutableArray *views;
 }
 
 @end
@@ -18,7 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // Set tag to 0 to prevent deletion
+    _toolbar.tag = 0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,7 +33,21 @@
         CGPoint location = [touch locationInView:self.view];
         NSLog(@"%f, %f", location.x, location.y);
         
+        // Create the view
+        UIView *circleView = [[UIView alloc] initWithFrame:CGRectMake(location.x-5, location.y-5, 10, 10)];
+        circleView.alpha = 0.5;
+        circleView.layer.cornerRadius = 5;
+        circleView.backgroundColor = [UIColor blueColor];
+        circleView.tag = [views count]+1;
+        [views addObject:circleView];
+        [self.view addSubview:circleView];
     }
 }
 
+- (IBAction)clearPressed:(id)sender {
+    // Remove all views except the toolbar
+    for (UIView *view in [self.view subviews]) {
+        if(view.tag != 0)[view removeFromSuperview];
+    }
+}
 @end

@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
+
+- (IBAction)clearPressed:(id)sender;
 
 @end
 
