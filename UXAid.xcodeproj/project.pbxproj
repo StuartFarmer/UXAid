@@ -416,6 +416,7 @@
 				B680706A1AE847AB00D0D18A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B680706B1AE847AB00D0D18A /* Build configuration list for PBXNativeTarget "UXAidTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				B680706D1AE847AB00D0D18A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
