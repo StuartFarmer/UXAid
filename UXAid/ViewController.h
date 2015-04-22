@@ -11,8 +11,10 @@
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 - (IBAction)clearPressed:(id)sender;
+- (IBAction)addImagePressed:(id)sender;
 
 @end
 
