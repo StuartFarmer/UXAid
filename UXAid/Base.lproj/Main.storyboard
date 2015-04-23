@@ -51,6 +51,8 @@
                             <constraint firstItem="6g0-ib-HxB" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="yGZ-9q-plz"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="6g0-ib-HxB" id="ING-Fk-dC4"/>
                         <outlet property="toolbar" destination="p9Q-lh-NP6" id="Ce1-wt-SLr"/>
