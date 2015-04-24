@@ -69,12 +69,24 @@
         [points removeAllObjects];
         [weights removeAllObjects];
     }
+    // Always throw it back to the non-heat view. This is something that the user naturally assumes will happen. However, only toggle it if the heat view is shown, obviously.
+    if (isHeat) [self toggleHeat];
 }
 
 - (IBAction)addImagePressed:(id)sender {
     // If the heat view is on, switch this button to an export button for saving images.
     if (isHeat) {
+        // Combine the heat map with the image below it to create an image that shows where users have pressed
+        UIGraphicsBeginImageContext(CGSizeMake(_imageView.frame.size.width, _imageView.frame.size.height));
+        UIImage *a = _imageView.image;
+        [a drawAtPoint:CGPointMake(0, 0)];
         
+        UIImage *b = _heatImageView.image;
+        [b drawAtPoint:CGPointMake(0, 0)];
+        
+        UIImage *c = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        _imageView.image = c;
     } else {
         // Otherwise, use this button to select an image
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -86,6 +98,20 @@
 
 - (IBAction)viewHeatPressed:(id)sender {
     // Toggling of heat view
+    [self toggleHeat];
+}
+
+#pragma UIImagePickerViewDelegate Methods
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    // Dismiss picker view controller
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    // Set image view to the image
+    NSLog(@"%@", info);
+    _imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+}
+
+-(void) toggleHeat {
     if (isHeat) {
         // Toggle off
         isHeat = NO;
@@ -104,15 +130,5 @@
         // Adjust image button
         _addImageButton.image = [[FAKFontAwesome saveIconWithSize:30] imageWithSize:CGSizeMake(30, 30)];
     }
-}
-
-#pragma UIImagePickerViewDelegate Methods
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    // Dismiss picker view controller
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    
-    // Set image view to the image
-    NSLog(@"%@", info);
-    _imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 }
 @end
