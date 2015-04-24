@@ -6,14 +6,17 @@
 //  Copyright (c) 2015 Stuart Farmer. All rights reserved.
 //
 
-#import "FAKFontAwesome.h"
 #import "ViewController.h"
 #import "LFHeatMap.h"
+#import "FAKFontAwesome.h"
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+    UIImage *outputImage;
+    
     NSMutableArray *views;
     NSMutableArray *points;
     NSMutableArray *weights;
+    
     BOOL isHeat;
 }
 
@@ -36,9 +39,6 @@
     // Let us know that the heat map is NOT visible and hide it.
     isHeat = NO;
     _heatImageView.hidden = YES;
-    
-    // Set tag to 0 to prevent deletion
-    _toolbar.tag = 0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,6 +60,7 @@
     }
 }
 
+#pragma UI Methods
 - (IBAction)clearPressed:(id)sender {
     // If there are no points, then the user has double tapped the clear button, and so remove the image.
     if ([points count] == 0) {
@@ -77,16 +78,17 @@
     // If the heat view is on, switch this button to an export button for saving images.
     if (isHeat) {
         // Combine the heat map with the image below it to create an image that shows where users have pressed
-        UIGraphicsBeginImageContext(CGSizeMake(_imageView.frame.size.width, _imageView.frame.size.height));
-        UIImage *a = _imageView.image;
-        [a drawAtPoint:CGPointMake(0, 0)];
+        UIGraphicsBeginImageContext(_imageView.frame.size);
         
-        UIImage *b = _heatImageView.image;
-        [b drawAtPoint:CGPointMake(0, 0)];
+        [_imageView.image drawInRect:self.view.frame];
+        [_heatImageView.image drawInRect:self.view.frame];
         
-        UIImage *c = UIGraphicsGetImageFromCurrentImageContext();
+        outputImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
-        _imageView.image = c;
+        
+        // Then throw up the option to save this image.
+        UIImageWriteToSavedPhotosAlbum(outputImage, nil, @selector(saved:error:context:), nil);
+
     } else {
         // Otherwise, use this button to select an image
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -111,6 +113,7 @@
     _imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 }
 
+#pragma Non-UI Methods
 -(void) toggleHeat {
     if (isHeat) {
         // Toggle off
@@ -129,6 +132,28 @@
         
         // Adjust image button
         _addImageButton.image = [[FAKFontAwesome saveIconWithSize:30] imageWithSize:CGSizeMake(30, 30)];
+    }
+}
+
+- (void)saved:(UIImage *)image error:(NSError *)error context:(void*)context {
+    if (error) {
+        // Display an error message
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"Error"
+                              message:error.localizedDescription
+                              delegate:self
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil, nil];
+        [alert show];
+    } else {
+        // Notify user save was a success
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"Saved!"
+                              message:nil
+                              delegate:self
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil, nil];
+        [alert show];
     }
 }
 @end
