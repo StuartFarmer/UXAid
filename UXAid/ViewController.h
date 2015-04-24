@@ -12,9 +12,11 @@
 
 @property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *heatImageView;
 
 - (IBAction)clearPressed:(id)sender;
 - (IBAction)addImagePressed:(id)sender;
+- (IBAction)viewHeatPressed:(id)sender;
 
 @end
 

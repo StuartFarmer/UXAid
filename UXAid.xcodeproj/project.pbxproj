@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B64876591AE9DFF7000C44EA /* LFHeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B64876581AE9DFF7000C44EA /* LFHeatMap.m */; };
+		B64876611AE9E4F0000C44EA /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B648765C1AE9E4F0000C44EA /* FAImageView.m */; };
+		B64876621AE9E4F0000C44EA /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = B648765E1AE9E4F0000C44EA /* NSString+FontAwesome.m */; };
+		B64876631AE9E4F0000C44EA /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = B64876601AE9E4F0000C44EA /* UIFont+FontAwesome.m */; };
 		B680704B1AE847AB00D0D18A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B680704A1AE847AB00D0D18A /* main.m */; };
 		B680704E1AE847AB00D0D18A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B680704D1AE847AB00D0D18A /* AppDelegate.m */; };
 		B68070511AE847AB00D0D18A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68070501AE847AB00D0D18A /* ViewController.m */; };
@@ -27,6 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B64876571AE9DFF7000C44EA /* LFHeatMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHeatMap.h; sourceTree = "<group>"; };
+		B64876581AE9DFF7000C44EA /* LFHeatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHeatMap.m; sourceTree = "<group>"; };
+		B648765B1AE9E4F0000C44EA /* FAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAImageView.h; sourceTree = "<group>"; };
+		B648765C1AE9E4F0000C44EA /* FAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAImageView.m; sourceTree = "<group>"; };
+		B648765D1AE9E4F0000C44EA /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		B648765E1AE9E4F0000C44EA /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		B648765F1AE9E4F0000C44EA /* UIFont+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontAwesome.h"; sourceTree = "<group>"; };
+		B64876601AE9E4F0000C44EA /* UIFont+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontAwesome.m"; sourceTree = "<group>"; };
 		B68070451AE847AB00D0D18A /* UXAid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXAid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68070491AE847AB00D0D18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B680704A1AE847AB00D0D18A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +72,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B64876561AE9DFF7000C44EA /* LFHeatMap */ = {
+			isa = PBXGroup;
+			children = (
+				B64876571AE9DFF7000C44EA /* LFHeatMap.h */,
+				B64876581AE9DFF7000C44EA /* LFHeatMap.m */,
+			);
+			path = LFHeatMap;
+			sourceTree = "<group>";
+		};
+		B648765A1AE9E4F0000C44EA /* FAFontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				B648765B1AE9E4F0000C44EA /* FAImageView.h */,
+				B648765C1AE9E4F0000C44EA /* FAImageView.m */,
+				B648765D1AE9E4F0000C44EA /* NSString+FontAwesome.h */,
+				B648765E1AE9E4F0000C44EA /* NSString+FontAwesome.m */,
+				B648765F1AE9E4F0000C44EA /* UIFont+FontAwesome.h */,
+				B64876601AE9E4F0000C44EA /* UIFont+FontAwesome.m */,
+			);
+			path = FAFontAwesome;
+			sourceTree = "<group>";
+		};
 		B680703C1AE847AB00D0D18A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +115,8 @@
 		B68070471AE847AB00D0D18A /* UXAid */ = {
 			isa = PBXGroup;
 			children = (
+				B648765A1AE9E4F0000C44EA /* FAFontAwesome */,
+				B64876561AE9DFF7000C44EA /* LFHeatMap */,
 				B680704C1AE847AB00D0D18A /* AppDelegate.h */,
 				B680704D1AE847AB00D0D18A /* AppDelegate.m */,
 				B680704F1AE847AB00D0D18A /* ViewController.h */,
@@ -219,7 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64876591AE9DFF7000C44EA /* LFHeatMap.m in Sources */,
 				B68070511AE847AB00D0D18A /* ViewController.m in Sources */,
+				B64876621AE9E4F0000C44EA /* NSString+FontAwesome.m in Sources */,
+				B64876611AE9E4F0000C44EA /* FAImageView.m in Sources */,
+				B64876631AE9E4F0000C44EA /* UIFont+FontAwesome.m in Sources */,
 				B680704E1AE847AB00D0D18A /* AppDelegate.m in Sources */,
 				B680704B1AE847AB00D0D18A /* main.m in Sources */,
 			);

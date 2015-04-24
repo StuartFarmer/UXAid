@@ -6,11 +6,15 @@
 //  Copyright (c) 2015 Stuart Farmer. All rights reserved.
 //
 
+#import "NSString+FontAwesome.h"
 #import "ViewController.h"
+#import "LFHeatMap.h"
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
     NSMutableArray *views;
     NSMutableArray *points;
+    NSMutableArray *weights;
+    BOOL isHeat;
 }
 
 @end
@@ -20,7 +24,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Set up the labels for the toolbar to look good with FontAwesome
+    
+    
+    // Set up arrays for visualizing touches
     points = [[NSMutableArray alloc] init];
+    weights = [[NSMutableArray alloc] init];
+    
+    // Let us know that the heat map is NOT visible and hide it.
+    isHeat = NO;
+    _heatImageView.hidden = YES;
     
     // Set tag to 0 to prevent deletion
     _toolbar.tag = 0;
@@ -36,27 +49,24 @@
         CGPoint location = [touch locationInView:self.view];
         NSLog(@"%f, %f", location.x, location.y);
         
-        // Create the view
-        UIView *circleView = [[UIView alloc] initWithFrame:CGRectMake(location.x-5, location.y-5, 10, 10)];
-        circleView.alpha = 0.5;
-        circleView.layer.cornerRadius = 5;
-        circleView.backgroundColor = [UIColor blueColor];
-        
-        // Set a tag to allow future destruction
-        circleView.tag = [views count]+1;
-        
+        // Add the point to the points array
         [points addObject:[NSValue valueWithCGPoint:location]];
-
-        // Slap it onto the main view
-        [self.view addSubview:circleView];
+        [weights addObject:[NSNumber numberWithInt:5]];
+        
+        // Redraw the heat map
+        LFHeatMap *heatMap = [LFHeatMap heatMapWithRect:self.view.frame boost:1.0 points:points weights:weights];
+        _heatImageView.image = heatMap;
     }
 }
 
 - (IBAction)clearPressed:(id)sender {
-    // Remove all views except the toolbar
-    for (UIView *view in [self.view subviews]) {
-        if(view.tag != 0)[view removeFromSuperview];
+    // If there are no points, then the user has double tapped the clear button, and so remove the image.
+    if ([points count] == 0) {
         _imageView.image = nil;
+    } else {
+        _heatImageView.image = nil;
+        [points removeAllObjects];
+        [weights removeAllObjects];
     }
 }
 
@@ -66,6 +76,19 @@
     picker.delegate = self;
     picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (IBAction)viewHeatPressed:(id)sender {
+    // Toggling of heat view
+    if (isHeat) {
+        // Toggle off
+        isHeat = NO;
+        _heatImageView.hidden = YES;
+    } else {
+        // Toggle on
+        isHeat = YES;
+        _heatImageView.hidden = NO;
+    }
 }
 
 #pragma UIImagePickerViewDelegate Methods

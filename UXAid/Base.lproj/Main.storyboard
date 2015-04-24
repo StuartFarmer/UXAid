@@ -19,6 +19,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6g0-ib-HxB">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="scq-GN-IIi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9Q-lh-NP6">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
@@ -35,25 +38,34 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mn4-YZ-HD4"/>
-                                    <barButtonItem title="View Heat" id="7nM-sd-01X"/>
+                                    <barButtonItem title="View Heat" id="7nM-sd-01X">
+                                        <connections>
+                                            <action selector="viewHeatPressed:" destination="vXZ-lx-hvc" id="DfU-JN-7St"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="u7R-bK-EZs"/>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="scq-GN-IIi" firstAttribute="top" secondItem="6g0-ib-HxB" secondAttribute="top" id="4Eh-5J-Nbc"/>
                             <constraint firstAttribute="trailing" secondItem="p9Q-lh-NP6" secondAttribute="trailing" id="8ex-7J-W7J"/>
                             <constraint firstItem="6g0-ib-HxB" firstAttribute="leading" secondItem="p9Q-lh-NP6" secondAttribute="leading" id="HY3-lh-Fcf"/>
                             <constraint firstItem="6g0-ib-HxB" firstAttribute="trailing" secondItem="p9Q-lh-NP6" secondAttribute="trailing" id="YWS-pp-cAW"/>
+                            <constraint firstItem="scq-GN-IIi" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="ZGT-PG-7A0"/>
                             <constraint firstItem="6g0-ib-HxB" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="gz5-gz-ANN"/>
                             <constraint firstItem="p9Q-lh-NP6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="hoK-37-GYB"/>
                             <constraint firstItem="p9Q-lh-NP6" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="iBw-nh-uW9"/>
+                            <constraint firstItem="scq-GN-IIi" firstAttribute="trailing" secondItem="6g0-ib-HxB" secondAttribute="trailing" id="ikr-Li-j7d"/>
+                            <constraint firstItem="scq-GN-IIi" firstAttribute="leading" secondItem="p9Q-lh-NP6" secondAttribute="leading" id="oW9-Wr-LgS"/>
                             <constraint firstItem="6g0-ib-HxB" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="yGZ-9q-plz"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="heatImageView" destination="scq-GN-IIi" id="iHk-6L-MxR"/>
                         <outlet property="imageView" destination="6g0-ib-HxB" id="ING-Fk-dC4"/>
                         <outlet property="toolbar" destination="p9Q-lh-NP6" id="Ce1-wt-SLr"/>
                     </connections>
