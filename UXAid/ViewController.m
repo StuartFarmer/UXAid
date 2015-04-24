@@ -39,16 +39,6 @@
     
     // Set tag to 0 to prevent deletion
     _toolbar.tag = 0;
-    
-    for (NSString* family in [UIFont familyNames])
-    {
-        NSLog(@"%@", family);
-        
-        for (NSString* name in [UIFont fontNamesForFamilyName: family])
-        {
-            NSLog(@"  %@", name);
-        }
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,7 +49,6 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInView:self.view];
-        NSLog(@"%f, %f", location.x, location.y);
         
         // Add the point to the points array
         [points addObject:[NSValue valueWithCGPoint:location]];
@@ -83,11 +72,16 @@
 }
 
 - (IBAction)addImagePressed:(id)sender {
-    // Fire up the ol' image picker
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-    [self presentViewController:picker animated:YES completion:nil];
+    // If the heat view is on, switch this button to an export button for saving images.
+    if (isHeat) {
+        
+    } else {
+        // Otherwise, use this button to select an image
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        [self presentViewController:picker animated:YES completion:nil];
+    }
 }
 
 - (IBAction)viewHeatPressed:(id)sender {
@@ -98,11 +92,17 @@
         _heatImageView.hidden = YES;
         _viewHeatButton.image = [[FAKFontAwesome eyeIconWithSize:30] imageWithSize:CGSizeMake(30, 30)];
         
+        // Adjust image button
+        _addImageButton.image = [[FAKFontAwesome imageIconWithSize:28] imageWithSize:CGSizeMake(30, 30)];
+        
     } else {
         // Toggle on
         isHeat = YES;
         _heatImageView.hidden = NO;
         _viewHeatButton.image = [[FAKFontAwesome eyeSlashIconWithSize:30] imageWithSize:CGSizeMake(30, 30)];
+        
+        // Adjust image button
+        _addImageButton.image = [[FAKFontAwesome saveIconWithSize:30] imageWithSize:CGSizeMake(30, 30)];
     }
 }
 

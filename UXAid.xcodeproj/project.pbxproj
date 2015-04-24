@@ -18,6 +18,8 @@
 		B648768F1AE9EEC0000C44EA /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B64876861AE9EEC0000C44EA /* foundation-icons.ttf */; };
 		B64876901AE9EEC0000C44EA /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B64876871AE9EEC0000C44EA /* ionicons.ttf */; };
 		B64876911AE9EEC0000C44EA /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B64876881AE9EEC0000C44EA /* zocial-regular-webfont.ttf */; };
+		B64876931AE9F3BD000C44EA /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B64876921AE9F3BD000C44EA /* bg.png */; };
+		B64876951AE9F3C3000C44EA /* glove.png in Resources */ = {isa = PBXBuildFile; fileRef = B64876941AE9F3C3000C44EA /* glove.png */; };
 		B680704B1AE847AB00D0D18A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B680704A1AE847AB00D0D18A /* main.m */; };
 		B680704E1AE847AB00D0D18A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B680704D1AE847AB00D0D18A /* AppDelegate.m */; };
 		B68070511AE847AB00D0D18A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68070501AE847AB00D0D18A /* ViewController.m */; };
@@ -56,6 +58,8 @@
 		B64876861AE9EEC0000C44EA /* foundation-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "foundation-icons.ttf"; sourceTree = "<group>"; };
 		B64876871AE9EEC0000C44EA /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		B64876881AE9EEC0000C44EA /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
+		B64876921AE9F3BD000C44EA /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = appicon/bg.png; sourceTree = "<group>"; };
+		B64876941AE9F3C3000C44EA /* glove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glove.png; path = appicon/glove.png; sourceTree = "<group>"; };
 		B68070451AE847AB00D0D18A /* UXAid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXAid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68070491AE847AB00D0D18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B680704A1AE847AB00D0D18A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 		B68070481AE847AB00D0D18A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B64876921AE9F3BD000C44EA /* bg.png */,
+				B64876941AE9F3C3000C44EA /* glove.png */,
 				B64876651AE9E749000C44EA /* fontawesome-webfont.ttf */,
 				B68070491AE847AB00D0D18A /* Info.plist */,
 				B680704A1AE847AB00D0D18A /* main.m */,
@@ -265,8 +271,10 @@
 			files = (
 				B64876671AE9E82C000C44EA /* fontawesome-webfont.ttf in Resources */,
 				B64876911AE9EEC0000C44EA /* zocial-regular-webfont.ttf in Resources */,
+				B64876931AE9F3BD000C44EA /* bg.png in Resources */,
 				B648768E1AE9EEC0000C44EA /* FontAwesome.otf in Resources */,
 				B68070541AE847AB00D0D18A /* Main.storyboard in Resources */,
+				B64876951AE9F3C3000C44EA /* glove.png in Resources */,
 				B68070591AE847AB00D0D18A /* LaunchScreen.xib in Resources */,
 				B64876901AE9EEC0000C44EA /* ionicons.ttf in Resources */,
 				B648768F1AE9EEC0000C44EA /* foundation-icons.ttf in Resources */,
