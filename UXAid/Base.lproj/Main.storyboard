@@ -65,9 +65,12 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="addImageButton" destination="Hfs-gO-n8n" id="Aoe-MG-ahZ"/>
+                        <outlet property="clearButton" destination="YYe-1s-aRG" id="7W0-Qh-DTr"/>
                         <outlet property="heatImageView" destination="scq-GN-IIi" id="iHk-6L-MxR"/>
                         <outlet property="imageView" destination="6g0-ib-HxB" id="ING-Fk-dC4"/>
                         <outlet property="toolbar" destination="p9Q-lh-NP6" id="Ce1-wt-SLr"/>
+                        <outlet property="viewHeatButton" destination="7nM-sd-01X" id="KRT-xa-XR1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

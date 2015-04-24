@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Stuart Farmer. All rights reserved.
 //
 
-#import "NSString+FontAwesome.h"
+#import "FAKFontAwesome.h"
 #import "ViewController.h"
 #import "LFHeatMap.h"
 
@@ -25,7 +25,9 @@
     [super viewDidLoad];
     
     // Set up the labels for the toolbar to look good with FontAwesome
-    
+    _viewHeatButton.image = [[FAKFontAwesome eyeIconWithSize:30] imageWithSize:CGSizeMake(30, 30)];
+    _addImageButton.image = [[FAKFontAwesome imageIconWithSize:28] imageWithSize:CGSizeMake(30, 30)];
+    _clearButton.image = [[FAKFontAwesome closeIconWithSize:30] imageWithSize:CGSizeMake(30, 30)];
     
     // Set up arrays for visualizing touches
     points = [[NSMutableArray alloc] init];
@@ -37,6 +39,16 @@
     
     // Set tag to 0 to prevent deletion
     _toolbar.tag = 0;
+    
+    for (NSString* family in [UIFont familyNames])
+    {
+        NSLog(@"%@", family);
+        
+        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+        {
+            NSLog(@"  %@", name);
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,10 +96,13 @@
         // Toggle off
         isHeat = NO;
         _heatImageView.hidden = YES;
+        _viewHeatButton.image = [[FAKFontAwesome eyeIconWithSize:30] imageWithSize:CGSizeMake(30, 30)];
+        
     } else {
         // Toggle on
         isHeat = YES;
         _heatImageView.hidden = NO;
+        _viewHeatButton.image = [[FAKFontAwesome eyeSlashIconWithSize:30] imageWithSize:CGSizeMake(30, 30)];
     }
 }
 

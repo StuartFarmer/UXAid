@@ -11,6 +11,9 @@
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *clearButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *addImageButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *viewHeatButton;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIImageView *heatImageView;
 

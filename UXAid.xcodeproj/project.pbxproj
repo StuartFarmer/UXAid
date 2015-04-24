@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B64876591AE9DFF7000C44EA /* LFHeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B64876581AE9DFF7000C44EA /* LFHeatMap.m */; };
-		B64876611AE9E4F0000C44EA /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B648765C1AE9E4F0000C44EA /* FAImageView.m */; };
-		B64876621AE9E4F0000C44EA /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = B648765E1AE9E4F0000C44EA /* NSString+FontAwesome.m */; };
-		B64876631AE9E4F0000C44EA /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = B64876601AE9E4F0000C44EA /* UIFont+FontAwesome.m */; };
+		B64876671AE9E82C000C44EA /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B64876651AE9E749000C44EA /* fontawesome-webfont.ttf */; };
+		B64876891AE9EEC0000C44EA /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = B648767B1AE9EEC0000C44EA /* FAKFontAwesome.m */; };
+		B648768A1AE9EEC0000C44EA /* FAKFoundationIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = B648767D1AE9EEC0000C44EA /* FAKFoundationIcons.m */; };
+		B648768B1AE9EEC0000C44EA /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = B648767F1AE9EEC0000C44EA /* FAKIcon.m */; };
+		B648768C1AE9EEC0000C44EA /* FAKIonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = B64876811AE9EEC0000C44EA /* FAKIonIcons.m */; };
+		B648768D1AE9EEC0000C44EA /* FAKZocial.m in Sources */ = {isa = PBXBuildFile; fileRef = B64876831AE9EEC0000C44EA /* FAKZocial.m */; };
+		B648768E1AE9EEC0000C44EA /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = B64876841AE9EEC0000C44EA /* FontAwesome.otf */; };
+		B648768F1AE9EEC0000C44EA /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B64876861AE9EEC0000C44EA /* foundation-icons.ttf */; };
+		B64876901AE9EEC0000C44EA /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B64876871AE9EEC0000C44EA /* ionicons.ttf */; };
+		B64876911AE9EEC0000C44EA /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B64876881AE9EEC0000C44EA /* zocial-regular-webfont.ttf */; };
 		B680704B1AE847AB00D0D18A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B680704A1AE847AB00D0D18A /* main.m */; };
 		B680704E1AE847AB00D0D18A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B680704D1AE847AB00D0D18A /* AppDelegate.m */; };
 		B68070511AE847AB00D0D18A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68070501AE847AB00D0D18A /* ViewController.m */; };
@@ -33,12 +40,22 @@
 /* Begin PBXFileReference section */
 		B64876571AE9DFF7000C44EA /* LFHeatMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHeatMap.h; sourceTree = "<group>"; };
 		B64876581AE9DFF7000C44EA /* LFHeatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHeatMap.m; sourceTree = "<group>"; };
-		B648765B1AE9E4F0000C44EA /* FAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAImageView.h; sourceTree = "<group>"; };
-		B648765C1AE9E4F0000C44EA /* FAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAImageView.m; sourceTree = "<group>"; };
-		B648765D1AE9E4F0000C44EA /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
-		B648765E1AE9E4F0000C44EA /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
-		B648765F1AE9E4F0000C44EA /* UIFont+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontAwesome.h"; sourceTree = "<group>"; };
-		B64876601AE9E4F0000C44EA /* UIFont+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontAwesome.m"; sourceTree = "<group>"; };
+		B64876651AE9E749000C44EA /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		B648767A1AE9EEC0000C44EA /* FAKFontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKFontAwesome.h; sourceTree = "<group>"; };
+		B648767B1AE9EEC0000C44EA /* FAKFontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKFontAwesome.m; sourceTree = "<group>"; };
+		B648767C1AE9EEC0000C44EA /* FAKFoundationIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKFoundationIcons.h; sourceTree = "<group>"; };
+		B648767D1AE9EEC0000C44EA /* FAKFoundationIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKFoundationIcons.m; sourceTree = "<group>"; };
+		B648767E1AE9EEC0000C44EA /* FAKIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKIcon.h; sourceTree = "<group>"; };
+		B648767F1AE9EEC0000C44EA /* FAKIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKIcon.m; sourceTree = "<group>"; };
+		B64876801AE9EEC0000C44EA /* FAKIonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKIonIcons.h; sourceTree = "<group>"; };
+		B64876811AE9EEC0000C44EA /* FAKIonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKIonIcons.m; sourceTree = "<group>"; };
+		B64876821AE9EEC0000C44EA /* FAKZocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKZocial.h; sourceTree = "<group>"; };
+		B64876831AE9EEC0000C44EA /* FAKZocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKZocial.m; sourceTree = "<group>"; };
+		B64876841AE9EEC0000C44EA /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		B64876851AE9EEC0000C44EA /* FontAwesomeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesomeKit.h; sourceTree = "<group>"; };
+		B64876861AE9EEC0000C44EA /* foundation-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "foundation-icons.ttf"; sourceTree = "<group>"; };
+		B64876871AE9EEC0000C44EA /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
+		B64876881AE9EEC0000C44EA /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
 		B68070451AE847AB00D0D18A /* UXAid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXAid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68070491AE847AB00D0D18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B680704A1AE847AB00D0D18A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,18 +98,28 @@
 			path = LFHeatMap;
 			sourceTree = "<group>";
 		};
-		B648765A1AE9E4F0000C44EA /* FAFontAwesome */ = {
+		B64876791AE9EEC0000C44EA /* FontAwesomeKit */ = {
 			isa = PBXGroup;
 			children = (
-				B648765B1AE9E4F0000C44EA /* FAImageView.h */,
-				B648765C1AE9E4F0000C44EA /* FAImageView.m */,
-				B648765D1AE9E4F0000C44EA /* NSString+FontAwesome.h */,
-				B648765E1AE9E4F0000C44EA /* NSString+FontAwesome.m */,
-				B648765F1AE9E4F0000C44EA /* UIFont+FontAwesome.h */,
-				B64876601AE9E4F0000C44EA /* UIFont+FontAwesome.m */,
+				B648767A1AE9EEC0000C44EA /* FAKFontAwesome.h */,
+				B648767B1AE9EEC0000C44EA /* FAKFontAwesome.m */,
+				B648767C1AE9EEC0000C44EA /* FAKFoundationIcons.h */,
+				B648767D1AE9EEC0000C44EA /* FAKFoundationIcons.m */,
+				B648767E1AE9EEC0000C44EA /* FAKIcon.h */,
+				B648767F1AE9EEC0000C44EA /* FAKIcon.m */,
+				B64876801AE9EEC0000C44EA /* FAKIonIcons.h */,
+				B64876811AE9EEC0000C44EA /* FAKIonIcons.m */,
+				B64876821AE9EEC0000C44EA /* FAKZocial.h */,
+				B64876831AE9EEC0000C44EA /* FAKZocial.m */,
+				B64876841AE9EEC0000C44EA /* FontAwesome.otf */,
+				B64876851AE9EEC0000C44EA /* FontAwesomeKit.h */,
+				B64876861AE9EEC0000C44EA /* foundation-icons.ttf */,
+				B64876871AE9EEC0000C44EA /* ionicons.ttf */,
+				B64876881AE9EEC0000C44EA /* zocial-regular-webfont.ttf */,
 			);
-			path = FAFontAwesome;
-			sourceTree = "<group>";
+			name = FontAwesomeKit;
+			path = UXAid/FontAwesomeKit;
+			sourceTree = SOURCE_ROOT;
 		};
 		B680703C1AE847AB00D0D18A = {
 			isa = PBXGroup;
@@ -115,7 +142,7 @@
 		B68070471AE847AB00D0D18A /* UXAid */ = {
 			isa = PBXGroup;
 			children = (
-				B648765A1AE9E4F0000C44EA /* FAFontAwesome */,
+				B64876791AE9EEC0000C44EA /* FontAwesomeKit */,
 				B64876561AE9DFF7000C44EA /* LFHeatMap */,
 				B680704C1AE847AB00D0D18A /* AppDelegate.h */,
 				B680704D1AE847AB00D0D18A /* AppDelegate.m */,
@@ -132,6 +159,7 @@
 		B68070481AE847AB00D0D18A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B64876651AE9E749000C44EA /* fontawesome-webfont.ttf */,
 				B68070491AE847AB00D0D18A /* Info.plist */,
 				B680704A1AE847AB00D0D18A /* main.m */,
 			);
@@ -235,8 +263,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64876671AE9E82C000C44EA /* fontawesome-webfont.ttf in Resources */,
+				B64876911AE9EEC0000C44EA /* zocial-regular-webfont.ttf in Resources */,
+				B648768E1AE9EEC0000C44EA /* FontAwesome.otf in Resources */,
 				B68070541AE847AB00D0D18A /* Main.storyboard in Resources */,
 				B68070591AE847AB00D0D18A /* LaunchScreen.xib in Resources */,
+				B64876901AE9EEC0000C44EA /* ionicons.ttf in Resources */,
+				B648768F1AE9EEC0000C44EA /* foundation-icons.ttf in Resources */,
 				B68070561AE847AB00D0D18A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,13 +288,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B648768B1AE9EEC0000C44EA /* FAKIcon.m in Sources */,
 				B64876591AE9DFF7000C44EA /* LFHeatMap.m in Sources */,
 				B68070511AE847AB00D0D18A /* ViewController.m in Sources */,
-				B64876621AE9E4F0000C44EA /* NSString+FontAwesome.m in Sources */,
-				B64876611AE9E4F0000C44EA /* FAImageView.m in Sources */,
-				B64876631AE9E4F0000C44EA /* UIFont+FontAwesome.m in Sources */,
+				B648768A1AE9EEC0000C44EA /* FAKFoundationIcons.m in Sources */,
+				B648768C1AE9EEC0000C44EA /* FAKIonIcons.m in Sources */,
 				B680704E1AE847AB00D0D18A /* AppDelegate.m in Sources */,
+				B64876891AE9EEC0000C44EA /* FAKFontAwesome.m in Sources */,
 				B680704B1AE847AB00D0D18A /* main.m in Sources */,
+				B648768D1AE9EEC0000C44EA /* FAKZocial.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
