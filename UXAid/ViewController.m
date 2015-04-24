@@ -10,6 +10,7 @@
 
 @interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
     NSMutableArray *views;
+    NSMutableArray *points;
 }
 
 @end
@@ -18,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    points = [[NSMutableArray alloc] init];
     
     // Set tag to 0 to prevent deletion
     _toolbar.tag = 0;
@@ -41,6 +44,8 @@
         
         // Set a tag to allow future destruction
         circleView.tag = [views count]+1;
+        
+        [points addObject:[NSValue valueWithCGPoint:location]];
 
         // Slap it onto the main view
         [self.view addSubview:circleView];
@@ -51,6 +56,7 @@
     // Remove all views except the toolbar
     for (UIView *view in [self.view subviews]) {
         if(view.tag != 0)[view removeFromSuperview];
+        _imageView.image = nil;
     }
 }
 
